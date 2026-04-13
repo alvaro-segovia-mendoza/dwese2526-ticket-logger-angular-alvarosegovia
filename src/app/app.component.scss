@@ -1,0 +1,15 @@
+:host {
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+}
+
+
+/* tu main real */
+.app-content {
+ flex: 1;
+ padding: 20px;
+ box-sizing: border-box;
+ overflow: auto;
+ background-color: #f8f8f8;
+}

@@ -1,0 +1,104 @@
+.detail-container {
+ width: 92%;
+ max-width: 980px;
+ margin: 26px auto;
+ font-family: Arial, sans-serif;
+}
+
+
+.top-row {
+ display: flex;
+ justify-content: space-between;
+ align-items: baseline;
+ flex-wrap: wrap;
+ gap: 12px;
+}
+
+
+h2 {
+ margin: 0;
+ color: #222;
+}
+
+
+.back-link {
+ text-decoration: none;
+ color: #00bcd4;
+ font-weight: 700;
+}
+
+
+.info {
+ margin-top: 18px;
+ padding: 12px;
+ background: #fff;
+ border-left: 4px solid #00bcd4;
+ border-radius: 8px;
+}
+
+
+.card {
+ margin-top: 16px;
+ background: #fff;
+ border-radius: 10px;
+ padding: 16px;
+ box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+}
+
+
+.row {
+ display: grid;
+ grid-template-columns: 90px 1fr;
+ gap: 12px;
+ padding: 6px 0;
+ border-bottom: 1px solid #eee;
+}
+
+
+.row:last-child {
+ border-bottom: none;
+}
+
+
+.label {
+ font-weight: 700;
+ color: #333;
+}
+
+
+.value {
+ color: #111;
+}
+
+
+h3 {
+ margin: 22px 0 10px;
+ color: #222;
+}
+
+
+.provinces-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+
+
+.provinces-table th,
+.provinces-table td {
+ padding: 10px 12px;
+ border-bottom: 1px solid #eee;
+ text-align: left;
+}
+
+
+.provinces-table thead {
+ background: #333;
+ color: #fff;
+}
+
+
+.error-message {
+ margin-top: 18px;
+ color: #b00020;
+ font-size: 0.95rem;
+}

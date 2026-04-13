@@ -1,0 +1,29 @@
+<section class="detail-container">
+  <div class="top-row">
+    <h2>Detalle de Comunidad Autónoma</h2>
+    <a routerLink="/regions" class="back-link">Volver</a>
+  </div>
+
+  @if (loading) {
+    <p>Cargando detalle...</p>
+  } @else if (error) {
+    <p class="error-message" role="alert">{{ error }}</p>
+  } @else if (region) {
+    <div class="detail-card">
+      <p><strong>ID:</strong> {{ region.id }}</p>
+      <p><strong>Código:</strong> {{ region.code }}</p>
+      <p><strong>Nombre:</strong> {{ region.name }}</p>
+
+      <h3>Provincias</h3>
+      @if (region.provinces.length) {
+        <ul>
+          @for (province of region.provinces; track province.id) {
+            <li>{{ province.name }}</li>
+          }
+        </ul>
+      } @else {
+        <p>No hay provincias asociadas.</p>
+      }
+    </div>
+  }
+</section>

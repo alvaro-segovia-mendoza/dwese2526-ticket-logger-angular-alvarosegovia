@@ -1,0 +1,33 @@
+/* ===== Footer ===== */
+.main-footer {
+ background-color: #333;
+ color: white;
+ text-align: center;
+ padding: 20px 10px;
+ font-size: 0.9rem;
+ border-top: 4px solid #00bcd4;
+}
+
+
+.main-footer .footer-content p {
+ margin: 6px 0;
+}
+
+
+.main-footer a {
+ color: #00bcd4;
+ text-decoration: none;
+ font-weight: bold;
+ transition: color 0.3s ease;
+}
+
+
+.main-footer a:hover {
+ color: #80deea;
+}
+
+
+/* si quieres que el enlace no “rompa” el footer en móvil */
+.main-footer a {
+ word-break: break-word;
+}

@@ -1,0 +1,129 @@
+/* ===== Header ===== */
+.main-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+
+
+ background-color: #333;
+ color: white;
+
+
+ padding: 10px 20px;
+
+
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+
+
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Logo */
+.main-header .logo a {
+ text-decoration: none;
+ color: white;
+ font-size: 1.5rem;
+ font-weight: bold;
+}
+
+
+/* Navegación */
+.navigation {
+ display: flex;
+ align-items: center;
+
+
+ /* importante para que el menú móvil (absolute) se coloque bien */
+ position: relative;
+}
+
+
+/* Links */
+.nav-links {
+ display: flex;
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+
+
+.nav-links li {
+ margin: 0 10px;
+}
+
+
+.nav-links a {
+ text-decoration: none;
+ color: white;
+ font-size: 1rem;
+ transition: color 0.3s ease;
+}
+
+
+.nav-links a:hover {
+ color: #00bcd4;
+}
+
+
+/* Botón hamburguesa */
+.menu-toggle {
+ display: none;
+ font-size: 1.5rem;
+ background: none;
+ border: none;
+ color: white;
+ cursor: pointer;
+
+
+ /* mejora accesibilidad */
+ padding: 6px 10px;
+ border-radius: 6px;
+}
+
+
+.menu-toggle:focus-visible {
+ outline: 2px solid #00bcd4;
+ outline-offset: 2px;
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+ .nav-links {
+   display: none;            /* oculto por defecto */
+   flex-direction: column;
+
+
+   background-color: #444;
+   position: absolute;
+   top: 50px;                /* ajusta si tu header es más alto */
+   right: 0;
+
+
+   width: 220px;
+   padding: 10px;
+
+
+   border-radius: 6px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+ }
+
+
+ /* esto requiere que en TS añadas/quites la clase 'active' */
+ .nav-links.active {
+   display: flex;
+ }
+
+
+ .nav-links li {
+   margin: 8px 0;
+ }
+
+
+ .menu-toggle {
+   display: block;
+ }
+}

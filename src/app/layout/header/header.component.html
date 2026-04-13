@@ -1,0 +1,18 @@
+<header class="main-header">
+<div class="logo">
+  <a href="/">Álvaro Segovia Mendoza</a>
+</div>
+<nav class="navigation">
+  <ul class="nav-links">
+    <li><a routerLink="/">Inicio</a></li>
+
+    @if (isLoggedIn$ | async) {
+      <li><a routerLink="/regions">Comunidades Autónomas</a></li>
+      <li><a href="#" (click)="logout(); $event.preventDefault()">Logout</a></li>
+    } @else {
+      <li><a routerLink="/login">Login</a></li>
+    }
+  </ul>
+  <button class="menu-toggle" aria-label="Open Menu">&#9776;</button>
+</nav>
+</header>
